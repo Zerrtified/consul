@@ -1,7 +1,9 @@
 # consul
 Three-node Consul cluster using Terraform.
 
-Infrastructure provisioning via Terraform is currently a work in progress. Consul configuration is outlined below.
+Infrastructure provisioning via Terraform is currently a work in progress. All instances and SG currently deployable via Terraform. Configuration of Consul services still outstanding.
+
+ Consul configuration is outlined below.
 
 ## Manual Consul Setup
 
