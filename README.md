@@ -1,5 +1,7 @@
 # consul
-Three-node Consul cluster using Terraform
+Three-node Consul cluster using Terraform.
+
+Infrastructure provisioning via Terraform is currently a work in progress. Consul configuration is outlined below.
 
 ## Manual Consul Setup
 
