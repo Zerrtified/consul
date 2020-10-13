@@ -1,7 +1,7 @@
 # consul
 Three-node Consul cluster using Terraform
 
-## Setup
+## Manual Consul Setup
 
 Download and extract the Linux consul binary:
 ```bash
