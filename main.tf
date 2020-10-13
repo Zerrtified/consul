@@ -78,9 +78,26 @@ resource "aws_security_group" "default" {
   }
 }
 
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
+}
+
 resource "aws_instance" "consul-1" {
-  ami           = "ami-0edab43b6fa892279"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
+  key_name = "test-instance-1"
   tags = {
     Project = "consul-cluster"
     Name    = "Consul-1"
@@ -88,8 +105,9 @@ resource "aws_instance" "consul-1" {
 }
 
 resource "aws_instance" "consul-2" {
-  ami           = "ami-0edab43b6fa892279"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
+  key_name = "test-instance-1"
   tags = {
     Project = "consul-cluster"
     Name    = "Consul-2"
@@ -97,8 +115,9 @@ resource "aws_instance" "consul-2" {
 }
 
 resource "aws_instance" "consul-3" {
-  ami           = "ami-0edab43b6fa892279"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
+  key_name = "test-instance-1"
   tags = {
     Project = "consul-cluster"
     Name    = "Consul-3"
