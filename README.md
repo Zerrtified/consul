@@ -1,7 +1,6 @@
 # consul
-Three-node Consul cluster using Terraform.
 
-Consul is an open source key-value store. It is used for use cases such as service discovery, config management, etc. This is an exploration of deploying a 3-node cluster via Terraform.
+Consul is an open source key-value store. It is used for use cases such as service discovery, config management, etc. This is an exploration of deploying a three-node cluster via Terraform.
 
 Infrastructure provisioning via Terraform is currently a work in progress. All instances and SG currently deployable via Terraform. Configuration of Consul services still outstanding.
 
